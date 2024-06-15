@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Hapus APK Bawaan</title>
+</head>
+<body>
+    <h1>Cara Hapus APK Bawaan</h1>   
+    <h2>Langkah 1: Unduh dan Instal APK</h2>
+    <p>
+        <a href="https://www.mediafire.com/file/6y47dk2txlgwhwm/LADB.apk/file" target="_blank">Unduh LADB APK</a>
+        <br>
+        <a href="https://www.mediafire.com/file/4wjxedjuxxyuec3/app+inspector.apk/file" target="_blank">Unduh App Inspector</a>
+    </p>
+
+    <h2>Langkah 2: Menghapus APK Bawaan</h2>
+    <p>Ikuti langkah-langkah berikut di LADB:</p>
+    <pre>
+        <code>
+adb devices
+adb shell
+pm list package
+pm uninstall -k --user 0 <span id="package-name">com.android.google.youtube</span>
+        </code>
+    </pre>
+
+    <p>Gantilah <code><span id="package-name">com.android.google.youtube</span></code> dengan nama paket aplikasi yang ingin Anda hapus. Anda bisa mendapatkannya dari <code>pm list package</code>.</p>
+
+</body>
+</html>
